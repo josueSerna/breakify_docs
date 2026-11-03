@@ -1,0 +1,69 @@
+---
+title: Build responsive layouts with ease.
+description: Breakify simplifies responsive interface development in Flutter with flexible layouts, adaptive components and practical tools.
+template: splash
+---
+
+import FeatureSection from '../../components/FeatureSection.astro';
+import Footer from '../../components/Footer.astro';
+import ImagePlaceholder from '../../components/ImagePlaceholder.astro';
+
+<div class="hero-breakify">
+	<div class="hero-breakify__grid">
+		<div>
+			<span class="eyebrow">Flutter · responsive by design</span>
+			<h1>Build <strong>responsive</strong> layouts with ease.</h1>
+			<p class="hero-breakify__description">Breakify is a Flutter package designed to simplify responsive interface development, providing flexible layouts, adaptive components and tools to build interfaces for different screen sizes.</p>
+			<div class="hero-actions">
+				<a class="hero-button hero-button--primary" href="/installation/">Get started <span aria-hidden="true">→</span></a>
+				<a class="hero-button hero-button--secondary" href="/introduction/">Documentation <span aria-hidden="true">↗</span></a>
+			</div>
+		</div>
+		<div class="hero-visual"><ImagePlaceholder label="Estrechito illustration" /></div>
+	</div>
+</div>
+
+<section class="home-section">
+	<div class="two-column">
+		<div class="section-heading">
+			<span class="eyebrow">A better foundation</span>
+			<h2>Why Breakify?</h2>
+			<p>Building responsive interfaces in Flutter shouldn't require repetitive calculations, complicated conditions or unnecessary boilerplate.</p>
+			<p>Breakify provides reusable tools and flexible layouts that help developers create adaptive interfaces with cleaner and more maintainable code.</p>
+		</div>
+		<ImagePlaceholder label="Estrechito supporting illustration" />
+	</div>
+	<FeatureSection features={[
+		{ icon: '⌁', title: 'Simplified responsive design', description: 'Keep screen-size decisions readable and close to your layout.' },
+		{ icon: '◈', title: 'Flexible layouts', description: 'Compose interfaces that adapt without losing your visual intent.' },
+		{ icon: '◇', title: 'Reusable components', description: 'Build a consistent responsive system you can share across screens.' },
+		{ icon: '✦', title: 'Developer experience', description: 'Spend less time on boilerplate and more time shaping great products.' },
+	]} />
+</section>
+
+<section class="home-section home-section--tinted">
+	<div class="section-heading">
+		<span class="eyebrow">Explore the toolkit</span>
+		<h2>Everything in its right place.</h2>
+		<p>Explore the building blocks available in Breakify 0.3.0. Each area has a focused purpose and a clear path to its reference documentation.</p>
+	</div>
+	<div class="explore-grid">
+		{[
+			['01', 'Responsive Values', 'Adapt values across the layouts you support.', '/fundamentals/responsive-values/'],
+			['02', 'Breakpoints', 'Organize responsive decisions around named sizes.', '/fundamentals/breakpoints/'],
+			['03', 'Responsive Grids', 'Create grid-based compositions that can adapt.', '/layouts/breakify-responsive-grid/'],
+			['04', 'Layout Components', 'Build structured screens from reusable pieces.', '/layouts/breakify-grid/'],
+			['05', 'Navigation Components', 'Keep navigation patterns consistent and flexible.', '/navigation/breakify-navbar/'],
+			['06', 'Utilities', 'Use focused helpers for visibility and debugging.', '/utilities/breakify-visibility/'],
+		].map(([number, title, description, href]) => (
+			<article class="explore-card">
+				<span class="explore-card__number">{number}</span>
+				<h3>{title}</h3>
+				<p>{description}</p>
+				<a href={href}>Explore area <span aria-hidden="true">→</span></a>
+			</article>
+		))}
+	</div>
+</section>
+
+<Footer />

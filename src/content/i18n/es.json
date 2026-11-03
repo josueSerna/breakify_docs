@@ -1,0 +1,22 @@
+{
+	"skipLink.label": "Saltar al contenido",
+	"search.label": "Buscar",
+	"search.cancelLabel": "Cancelar",
+	"themeSelect.accessibleLabel": "Seleccionar tema",
+	"themeSelect.dark": "Oscuro",
+	"themeSelect.light": "Claro",
+	"themeSelect.auto": "Automático",
+	"languageSelect.accessibleLabel": "Seleccionar idioma",
+	"menuButton.accessibleLabel": "Abrir menú",
+	"sidebarNav.accessibleLabel": "Navegación principal",
+	"tableOfContents.onThisPage": "En esta página",
+	"tableOfContents.overview": "Resumen",
+	"i18n.untranslatedContent": "Esta página aún no está traducida.",
+	"page.previousLink": "Página anterior",
+	"page.nextLink": "Página siguiente",
+	"aside.tip": "Consejo",
+	"aside.note": "Nota",
+	"aside.caution": "Precaución",
+	"aside.danger": "Peligro",
+	"heading.anchorLabel": "Enlace a esta sección"
+}

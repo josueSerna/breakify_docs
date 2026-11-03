@@ -1,0 +1,14 @@
+---
+interface Props {
+	label: string;
+	class?: string;
+}
+
+const { label, class: className = '' } = Astro.props;
+---
+
+<div class:list={['image-placeholder', className]} role="img" aria-label={`${label} placeholder`}>
+	<span class="image-placeholder__orb" aria-hidden="true"></span>
+	<span>{label}</span>
+	<small>Add image to <code>public/images/</code></small>
+</div>
