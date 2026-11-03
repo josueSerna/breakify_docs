@@ -7,6 +7,7 @@ template: splash
 import FeatureSection from '../../../components/FeatureSection.astro';
 import Footer from '../../../components/Footer.astro';
 import ImagePlaceholder from '../../../components/ImagePlaceholder.astro';
+import PackageStats from '../../../components/PackageStats.astro';
 
 <div class="hero-breakify">
 	<div class="hero-breakify__grid">
@@ -19,9 +20,11 @@ import ImagePlaceholder from '../../../components/ImagePlaceholder.astro';
 				<a class="hero-button hero-button--secondary" href="/es/introduction/">Documentación <span aria-hidden="true">↗</span></a>
 			</div>
 		</div>
-		<div class="hero-visual"><ImagePlaceholder label="Ilustración de Estrechito" /></div>
+		<div class="hero-visual"><ImagePlaceholder src="/images/brix_with_breakify_logo.png" label="Brix con el logo de Breakify" /></div>
 	</div>
 </div>
+
+<PackageStats locale="es" />
 
 <section class="home-section">
 	<div class="two-column">
@@ -31,7 +34,7 @@ import ImagePlaceholder from '../../../components/ImagePlaceholder.astro';
 			<p>Crear interfaces responsivas en Flutter no debería requerir cálculos repetitivos, condiciones complejas ni código innecesario.</p>
 			<p>Breakify ofrece herramientas reutilizables y layouts flexibles para crear interfaces adaptativas con código más limpio y mantenible.</p>
 		</div>
-		<ImagePlaceholder label="Ilustración de Estrechito" />
+		<ImagePlaceholder src="/images/Brix_pensativo.png" label="Brix pensativo" />
 	</div>
 	<FeatureSection features={[
 		{ icon: '⌁', title: 'Diseño responsivo simple', description: 'Mantén las decisiones de tamaño legibles y cerca de tu layout.' },
@@ -39,6 +42,18 @@ import ImagePlaceholder from '../../../components/ImagePlaceholder.astro';
 		{ icon: '◇', title: 'Componentes reutilizables', description: 'Comparte un sistema responsivo consistente entre pantallas.' },
 		{ icon: '✦', title: 'Experiencia de desarrollo', description: 'Dedica menos tiempo al código repetitivo y más al producto.' },
 	]} />
+</section>
+
+<section class="home-section mascot-section">
+	<div class="two-column">
+		<ImagePlaceholder src="/images/Brix_programando.png" label="Brix programando" />
+		<div class="section-heading">
+			<span class="eyebrow">Conoce a Estrechito</span>
+			<h2>Una de las mentes maestras detrás de Breakify.</h2>
+			<p>Estrechito es la mascota amigable y relajada detrás de Breakify y de la marca personal de su creador. Siempre curioso, tranquilo y listo para ayudar, aporta un espíritu cercano al desarrollo responsivo en Flutter.</p>
+			<p>Cuando no está pensando en un layout, puedes encontrarlo programando, explorando ideas y haciendo que las interfaces complejas se sientan más simples.</p>
+		</div>
+	</div>
 </section>
 
 <section class="home-section home-section--tinted">

@@ -7,7 +7,7 @@ const localePrefix = Astro.url.pathname.startsWith('/es/') ? '/es' : '';
 <footer class="site-footer">
 	<div class="footer-inner">
 		<div>
-			<BrandMark />
+			<BrandMark footer />
 			<p class="footer-copy">A clearer way to build responsive Flutter interfaces.</p>
 		</div>
 		<nav class="footer-links" aria-label="Footer">
@@ -18,7 +18,7 @@ const localePrefix = Astro.url.pathname.startsWith('/es/') ? '/es' : '';
 		</nav>
 	</div>
 	<div class="footer-bottom">
-		<span>© {new Date().getFullYear()} Breakify. All rights reserved.</span>
+		<span>© {new Date().getFullYear()}. All rights reserved.</span>
 		<span>Built for thoughtful Flutter developers.</span>
 	</div>
 </footer>

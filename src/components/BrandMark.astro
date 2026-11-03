@@ -1,12 +1,12 @@
 ---
 interface Props {
 	compact?: boolean;
+	footer?: boolean;
 }
 
-const { compact = false } = Astro.props;
+const { compact = false, footer = false } = Astro.props;
 ---
 
 <a class:list={['brand-mark', { 'brand-mark--compact': compact }]} href="/" aria-label="Breakify home">
-	<span class="brand-mark__symbol" aria-hidden="true">&lt;/&gt;</span>
-	<span class="brand-mark__name">Breakify</span>
+	<img src={footer ? '/images/breakify_logo_blanco.png' : '/images/breakify_logo.png'} alt="Breakify" />
 </a>

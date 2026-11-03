@@ -1,14 +1,21 @@
 ---
 interface Props {
 	label: string;
+	src?: string;
 	class?: string;
 }
 
-const { label, class: className = '' } = Astro.props;
+const { label, src, class: className = '' } = Astro.props;
 ---
 
-<div class:list={['image-placeholder', className]} role="img" aria-label={`${label} placeholder`}>
-	<span class="image-placeholder__orb" aria-hidden="true"></span>
-	<span>{label}</span>
-	<small>Add image to <code>public/images/</code></small>
+<div class:list={['image-placeholder', { 'image-placeholder--filled': src }, className]} role="img" aria-label={label}>
+	{src ? (
+		<img src={src} alt={label} loading="lazy" />
+	) : (
+		<>
+			<span class="image-placeholder__orb" aria-hidden="true"></span>
+			<span>{label}</span>
+			<small>Add image to <code>public/images/</code></small>
+		</>
+	)}
 </div>

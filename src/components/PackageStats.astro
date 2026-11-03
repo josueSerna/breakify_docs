@@ -1,0 +1,70 @@
+---
+interface Props {
+	locale?: 'en' | 'es';
+}
+
+const { locale = 'en' } = Astro.props;
+const isSpanish = locale === 'es';
+---
+
+<section class="package-stats" aria-labelledby="package-stats-title" data-package-stats>
+	<div class="section-heading">
+		<span class="eyebrow">{isSpanish ? 'En pub.dev' : 'On pub.dev'}</span>
+		<h2 id="package-stats-title">{isSpanish ? 'Breakify en números.' : 'Breakify by the numbers.'}</h2>
+		<p>
+			{isSpanish
+				? 'Métricas actualizadas directamente desde la página oficial del paquete.'
+				: 'Metrics updated directly from the package’s official page.'}
+		</p>
+	</div>
+	<div class="stats-grid" aria-live="polite">
+		<article class="stat-card">
+			<strong data-stat="likes">—</strong>
+			<span>{isSpanish ? 'Likes' : 'Likes'}</span>
+		</article>
+		<article class="stat-card">
+			<strong data-stat="downloads">—</strong>
+			<span>{isSpanish ? 'Descargas (30 días)' : 'Downloads (30 days)'}</span>
+		</article>
+		<article class="stat-card">
+			<strong data-stat="points">—</strong>
+			<span>{isSpanish ? 'Puntuación de calidad' : 'Quality score'}</span>
+		</article>
+	</div>
+	<a class="stats-link" href="https://pub.dev/packages/breakify" target="_blank" rel="noreferrer">
+		{isSpanish ? 'Ver paquete en pub.dev' : 'View package on pub.dev'} <span aria-hidden="true">↗</span>
+	</a>
+</section>
+
+<script>
+	const statsRoot = document.querySelector<HTMLElement>('[data-package-stats]');
+
+	if (statsRoot) {
+		const formatNumber = (value: number) => new Intl.NumberFormat().format(value);
+		const updateStats = (score: { likeCount?: unknown; downloadCount30Days?: unknown; grantedPoints?: unknown; maxPoints?: unknown }) => {
+			const values = {
+				likes: typeof score.likeCount === 'number' ? formatNumber(score.likeCount) : '—',
+				downloads: typeof score.downloadCount30Days === 'number' ? formatNumber(score.downloadCount30Days) : '—',
+				points:
+					typeof score.grantedPoints === 'number' && typeof score.maxPoints === 'number'
+						? `${score.grantedPoints}/${score.maxPoints}`
+						: '—',
+			};
+
+			for (const [name, value] of Object.entries(values)) {
+				const element = statsRoot.querySelector<HTMLElement>(`[data-stat="${name}"]`);
+				if (element) element.textContent = value;
+			}
+		};
+
+		fetch('https://pub.dev/api/packages/breakify/score')
+			.then((response) => {
+				if (!response.ok) throw new Error(`pub.dev returned ${response.status}`);
+				return response.json();
+			})
+			.then(updateStats)
+			.catch(() => {
+				statsRoot.dataset.statsError = 'true';
+			});
+	}
+</script>

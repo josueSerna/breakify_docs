@@ -7,6 +7,7 @@ template: splash
 import FeatureSection from '../../components/FeatureSection.astro';
 import Footer from '../../components/Footer.astro';
 import ImagePlaceholder from '../../components/ImagePlaceholder.astro';
+import PackageStats from '../../components/PackageStats.astro';
 
 <div class="hero-breakify">
 	<div class="hero-breakify__grid">
@@ -19,9 +20,11 @@ import ImagePlaceholder from '../../components/ImagePlaceholder.astro';
 				<a class="hero-button hero-button--secondary" href="/introduction/">Documentation <span aria-hidden="true">↗</span></a>
 			</div>
 		</div>
-		<div class="hero-visual"><ImagePlaceholder label="Estrechito illustration" /></div>
+		<div class="hero-visual"><ImagePlaceholder src="/images/brix_with_breakify_logo.png" label="Brix with the Breakify logo" /></div>
 	</div>
 </div>
+
+<PackageStats />
 
 <section class="home-section">
 	<div class="two-column">
@@ -31,7 +34,7 @@ import ImagePlaceholder from '../../components/ImagePlaceholder.astro';
 			<p>Building responsive interfaces in Flutter shouldn't require repetitive calculations, complicated conditions or unnecessary boilerplate.</p>
 			<p>Breakify provides reusable tools and flexible layouts that help developers create adaptive interfaces with cleaner and more maintainable code.</p>
 		</div>
-		<ImagePlaceholder label="Estrechito supporting illustration" />
+		<ImagePlaceholder src="/images/Brix_pensativo.png" label="Brix thinking" />
 	</div>
 	<FeatureSection features={[
 		{ icon: '⌁', title: 'Simplified responsive design', description: 'Keep screen-size decisions readable and close to your layout.' },
@@ -39,6 +42,18 @@ import ImagePlaceholder from '../../components/ImagePlaceholder.astro';
 		{ icon: '◇', title: 'Reusable components', description: 'Build a consistent responsive system you can share across screens.' },
 		{ icon: '✦', title: 'Developer experience', description: 'Spend less time on boilerplate and more time shaping great products.' },
 	]} />
+</section>
+
+<section class="home-section mascot-section">
+	<div class="two-column">
+		<ImagePlaceholder src="/images/Brix_programando.png" label="Brix programming" />
+		<div class="section-heading">
+			<span class="eyebrow">Meet Estrechito</span>
+			<h2>One of the minds behind Breakify.</h2>
+			<p>Estrechito is the friendly and relaxed mascot behind Breakify and the personal brand of its creator. Always curious, calm and ready to help, he brings a welcoming spirit to responsive Flutter development.</p>
+			<p>When he is not thinking through a layout, you can find him programming, exploring ideas and making complex interfaces feel simpler.</p>
+		</div>
+	</div>
 </section>
 
 <section class="home-section home-section--tinted">
