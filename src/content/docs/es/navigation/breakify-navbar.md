@@ -1,6 +1,6 @@
 ---
 title: BreakifyNavbar
-description: Barra de navegación responsiva.
+description: Construye una barra de navegación responsiva experimental.
 ---
 
 `BreakifyNavbar` es una barra de navegación responsiva experimental. Desde el breakpoint seleccionado, por defecto `md`, los elementos se muestran horizontalmente; por debajo se usa un menú desplegable o drawer.

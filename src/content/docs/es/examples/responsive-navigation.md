@@ -3,6 +3,8 @@ title: Navegación responsiva
 description: Añade un navbar adaptativo a Flutter.
 ---
 
+`BreakifyNavbar` usa elementos en línea en el breakpoint configurado y un menú móvil por debajo de él:
+
 ```dart
 BreakifyNavbar(
   items: [

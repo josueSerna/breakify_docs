@@ -3,6 +3,8 @@ title: Landing page responsiva
 description: Combina secciones, valores y un grid responsivo.
 ---
 
+Construye una landing page con una sección de ancho completo y un grid de funcionalidades con tamaño automático:
+
 ```dart
 BreakifyScope(
   child: BreakifySection(

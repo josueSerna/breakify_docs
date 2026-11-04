@@ -3,6 +3,8 @@ title: Breakpoints predeterminados
 description: Umbrales predeterminados de Breakify.
 ---
 
+Breakify proporciona cinco anchos mínimos predeterminados:
+
 | Nombre | Ancho mínimo |
 | --- | ---: |
 | `sm` | 640 |

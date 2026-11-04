@@ -24,12 +24,12 @@ export default defineConfig({
 			},
 			favicon: '/icon_breakify.ico',
 			logo: {
-				light: './public/images/breakify_logo.png',
-				dark: './public/images/breakify_logo_blanco.png',
+				light: './public/images/breakify_logo_rigth.png',
+				dark: './public/images/breakify_logo_blanco_rigth.png',
 			},
 			customCss: ['./src/styles/custom.css'],
 			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/YOUR_ORGANIZATION/breakify' },
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/josueSerna/breakify' },
 				{ icon: 'external', label: 'pub.dev', href: 'https://pub.dev/packages/breakify' },
 			],
 			sidebar: [

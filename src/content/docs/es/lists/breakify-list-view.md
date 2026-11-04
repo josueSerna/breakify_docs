@@ -1,6 +1,6 @@
 ---
 title: BreakifyListView
-description: Construye listas con espaciado responsivo.
+description: Construye listas con espaciado y dirección responsivos.
 ---
 
 ```dart

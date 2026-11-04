@@ -19,3 +19,4 @@ BreakifyScope(
 ```
 
 Los valores personalizados son útiles cuando tu sistema de diseño usa transiciones diferentes.
+Mantén el orden desde el ancho más pequeño hasta el más grande.

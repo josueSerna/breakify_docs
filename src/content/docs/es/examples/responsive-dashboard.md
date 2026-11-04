@@ -3,7 +3,7 @@ title: Dashboard responsivo
 description: Combina paneles y layouts adaptativos.
 ---
 
-Usa `BreakifyPanelLayout` para el contenido principal y tarjetas secundarias:
+Usa `BreakifyPanelLayout` para el contenido principal y las tarjetas secundarias. Usa `BreakifyAdaptativeLayout` dentro de un panel cuando sus propios hijos necesiten una transición entre fila y columna:
 
 ```dart
 BreakifyPanelLayout(

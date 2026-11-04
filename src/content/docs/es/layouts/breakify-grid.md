@@ -1,6 +1,6 @@
 ---
 title: BreakifyGrid
-description: Grid responsivo con columnas configurables.
+description: Construye grids con columnas y alturas responsivas.
 ---
 
 `BreakifyGrid` es un grid responsivo con columnas, espaciado y proporción configurables.

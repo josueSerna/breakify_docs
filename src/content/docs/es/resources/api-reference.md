@@ -23,4 +23,4 @@ La API pública se importa desde `package:breakify/breakify.dart`.
 
 `BreakifyNavbar` incluye `BreakifyNavbarItem`, `BreakifyNavbarMenuType`, `BreakifyNavbarScrollBehavior`, `BreakifyNavbarDrawerSide` y `logoMaxHeight`.
 
-`BreakifySection` y `BreakifyNavbar` son experimentales en 0.3.0. Consulta el código fuente del paquete como autoridad para firmas completas y valores predeterminados.
+`BreakifySection` y `BreakifyNavbar` son experimentales en 0.3.0. Consulta la API del código fuente y la documentación del paquete como autoridad para las firmas de los constructores.

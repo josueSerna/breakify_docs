@@ -15,4 +15,5 @@ const columns = BreakifyValue(
 final value = context.resolve(columns);
 ```
 
+`BreakifyValue` es genérico y puede resolver valores como `int`, `double` y `EdgeInsets`.
 Para transiciones suaves usa `BreakifyFluidValue`, que interpola linealmente entre los valores definidos.

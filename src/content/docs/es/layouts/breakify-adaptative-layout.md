@@ -15,7 +15,7 @@ BreakifyAdaptativeLayout(
 )
 ```
 
-`distributeEvenly` usa `Expanded` para los hijos horizontales cuando es `true`; `stretchChildren` aplica `CrossAxisAlignment.stretch` al layout vertical. `order` permite distribuciones distintas mediante `BreakifyLayoutOrder` y `BreakifyLayoutTemplate`. Las alturas de grupos no se igualan automáticamente.
+`distributeEvenly` usa `Expanded` para los hijos horizontales cuando es `true`; `stretchChildren` aplica `CrossAxisAlignment.stretch` al layout vertical. La propiedad opcional `order` permite elegir grupos distintos por encima y por debajo del breakpoint mediante `BreakifyLayoutOrder` y `BreakifyLayoutTemplate`. Las alturas de grupos no se igualan automáticamente.
 
 ## Ordenar hijos
 
@@ -31,4 +31,4 @@ BreakifyLayoutOrder(
 )
 ```
 
-Las plantillas disponibles son `inRow`, `inColumn`, `twoRows`, `twoColumns` y `custom(left:, right:)`. Los índices personalizados corresponden a la lista original de `children`. Cada hijo debe aparecer exactamente una vez, los grupos no pueden estar vacíos y los índices inválidos lanzan un error en debug.
+Las plantillas disponibles son `inRow`, `inColumn`, `twoRows`, `twoColumns` y `custom(left:, right:)`. Los índices personalizados corresponden a la lista original de `children`. Cada hijo debe aparecer exactamente una vez, ninguno de los grupos personalizados puede estar vacío y los índices inválidos lanzan un error en debug. Las plantillas de dos grupos colocan los primeros `ceil(n / 2)` hijos en el primer grupo.

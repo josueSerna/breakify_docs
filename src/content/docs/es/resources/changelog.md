@@ -38,13 +38,16 @@ description: Historial de versiones de Breakify.
 ## 0.2.0
 
 - Añadidos `BreakifyPanelLayout`, `BreakifyResponsiveGrid` y modos de visibilidad local/global.
-- Ampliados el ejemplo, las pruebas y la documentación bilingüe.
+- Ampliado el ejemplo y las pruebas.
+- Ampliada la documentación en inglés y español.
 
 ## 0.1.1
 
-- Añadidos `stretchChildren` y `equalHeight`.
-- Corregido el scroll horizontal de grids y listas.
-- Añadidos README bilingüe y aplicación de ejemplo completa.
+- Añadido `stretchChildren` a `BreakifyAdaptativeLayout`.
+- Añadido `equalHeight` a `BreakifyGrid`.
+- Corregido el scroll horizontal de `BreakifyGrid` y `BreakifyListView`.
+- Añadida documentación README en inglés y español, junto con una aplicación de ejemplo completa.
+- El comportamiento existente no cambió de forma predeterminada.
 
 ## 0.1.0
 
