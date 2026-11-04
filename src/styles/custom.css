@@ -89,6 +89,11 @@ main:has(.hero-breakify) > .content-panel:first-of-type { display: none; }
 .footer-bottom { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid rgba(200,239,240,.15); color: #8eb6bf; font-size: .75rem; }
 @media (max-width: 800px) { .hero-breakify__grid, .two-column { grid-template-columns: 1fr; gap: 2rem; } .hero-breakify { padding-top: 3rem; } .hero-visual { order: -1; min-height: 17rem; } .hero-visual .image-placeholder { min-height: 16rem; } .stats-grid, .feature-grid { grid-template-columns: repeat(2, 1fr); } .explore-grid, .social-grid { grid-template-columns: repeat(2, 1fr); } .footer-inner { align-items: flex-start; flex-direction: column; } }
 @media (max-width: 520px) { .hero-breakify h1 { font-size: 3.2rem; } .feature-grid, .explore-grid, .social-grid { grid-template-columns: 1fr; } .home-section { padding-top: 3.5rem; padding-bottom: 3.5rem; } .footer-bottom { align-items: flex-start; flex-direction: column; gap: .4rem; } }
+@media (min-width: 50rem) {
+	.header .right-group {
+		margin-inline-end: 2rem;
+	}
+}
 @media (max-width: 49.99rem) {
 	.header .right-group {
 		display: flex !important;
@@ -108,9 +113,7 @@ main:has(.hero-breakify) > .content-panel:first-of-type { display: none; }
 	}
 
 	.header .social-icons {
-		display: flex;
-		gap: .5rem;
-		align-items: center;
+		display: none;
 	}
 
 	.header starlight-theme-select label,
@@ -134,5 +137,56 @@ main:has(.hero-breakify) > .content-panel:first-of-type { display: none; }
 
 	.site-title img {
 		max-width: 9rem;
+	}
+}
+@media (max-width: 30rem) {
+	.header .right-group {
+		inset-inline-end: calc(var(--sl-nav-pad-x) + var(--sl-menu-button-size) + .25rem);
+		gap: .2rem;
+	}
+
+	.header .social-icons {
+		gap: .2rem;
+		flex: 0 0 auto;
+		white-space: nowrap;
+	}
+
+	.header .social-icons a {
+		display: inline-flex;
+		flex: 0 0 1.4rem;
+		width: 1.4rem;
+		height: 1.4rem;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.header .social-icons::after {
+		display: none;
+	}
+
+	.header starlight-theme-select,
+	.header starlight-theme-select label,
+	.header starlight-theme-select select {
+		width: 3.8rem;
+	}
+
+	.header starlight-lang-select,
+	.header starlight-lang-select label,
+	.header starlight-lang-select select {
+		width: 4.4rem;
+	}
+
+	.header starlight-theme-select select,
+	.header starlight-lang-select select {
+		padding-inline: 1.25rem 1rem;
+		font-size: .6rem;
+	}
+
+	.header .title-wrapper {
+		max-width: calc(100% - 13rem);
+	}
+
+	.site-title img {
+		max-width: 6rem;
 	}
 }
